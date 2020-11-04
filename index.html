@@ -22,49 +22,49 @@
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
-    <div id="9am" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">9AM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="9am" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="10am" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">10AM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="10am" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="11am" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">11AM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="11am" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="12pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">12PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="12pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="1pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">1PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="1pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="2pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">2PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="2pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="3pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">3PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="3pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="4pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">4PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="4pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
-    <div id="5pm" class="row">
+    <div class="row">
       <div class="col-sm-1 hour">5PM</div>
-      <textarea class="col-sm-10"></textarea>
+      <textarea id="5pm" class="col-sm-10"></textarea>
       <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
     </div>
   </div>
@@ -78,7 +78,7 @@
 
       function timeZone() {
         var currentHour = moment().hour();
-        var currentTime = $('.row');
+        var currentTime = $('.col-sm-10');
 
         currentTime.each(function () {
           var match = parseInt($(this).attr('id'))
