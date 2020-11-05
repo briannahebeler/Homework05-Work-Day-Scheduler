@@ -1,150 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-  <title>Work Day Scheduler</title>
-</head>
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour">9AM</div>
+        <textarea id="9am" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">10AM</div>
+        <textarea id="10am" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">11AM</div>
+        <textarea id="11am" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">12PM</div>
+        <textarea id="12pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">1PM</div>
+        <textarea id="1pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">2PM</div>
+        <textarea id="2pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">3PM</div>
+        <textarea id="3pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">4PM</div>
+        <textarea id="4pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 hour">5PM</div>
+        <textarea id="5pm" class="col-sm-10 timeblock"></textarea>
+        <button id="save" class="col-sm-1 saveBtn btn">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+    </div>
 
-<body>
-  <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-1 hour">9AM</div>
-      <textarea id="9am" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">10AM</div>
-      <textarea id="10am" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">11AM</div>
-      <textarea id="11am" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">12PM</div>
-      <textarea id="12pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">1PM</div>
-      <textarea id="1pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">2PM</div>
-      <textarea id="2pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">3PM</div>
-      <textarea id="3pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">4PM</div>
-      <textarea id="4pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-    <div class="row">
-      <div class="col-sm-1 hour">5PM</div>
-      <textarea id="5pm" class="col-sm-10 timeblock"></textarea>
-      <button id="save" class="col-sm-1 saveBtn btn"><i class="far fa-save"></i></button>
-    </div>
-  </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var currentDay = moment().format("dddd MMMM Do YYYY");
+        $("#currentDay").text(currentDay);
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
+        function timeBlocks() {
+          var currentHour = moment().hour();
+          var currentTime = $(".timeblock");
 
-      var currentDay = moment().format('dddd MMMM Do YYYY');
-      $("#currentDay").text(currentDay);
+          currentTime.each(function () {
+            var match = parseInt($(this).attr("id"));
+            if (match < 9) {
+              match += 12;
+            }
+            console.log(currentHour, match);
+            let time = $(this)[0];
+            if (currentHour === match) {
+              $(time).addClass("present");
+            } else if (currentHour > match) {
+              $(time).addClass("past");
+            } else if (currentHour < match) {
+              $(time).addClass("future");
+            }
+          });
+        }
+        timeBlocks();
 
-      function timeBlocks() {
-        var currentHour = moment().hour();
-        var currentTime = $('.timeblock');
+        var timeSlot = ["", "", "", "", "", "", "", "", ""];
 
-        currentTime.each(function () {
-          var match = parseInt($(this).attr('id'))
-          if (match < 9) {
-            match += 12;
+        function loadData() {
+          //grab timeslot data from local storage ‘get item’
+          localStorage.getItem(timeSlot);
+          //loop thru timeSlot on screen
+          for (var i = 0; i < timeSlot.length; i++) {
+            console.log(timeSlot[i]);
+            //for each row on the screen check timeslot array for non empty string
+
+            //set up eventTime, get the match < 9 ‘+=12’
+            var eventTime = $(".timeblock");
+            eventTime.each(function () {
+              var match = parseInt($(this).attr("id"));
+              if (match < 9) {
+                match += 12;
+              }
+              let time = $(this)[0];
+            });
+            //calculate timeSlot index = to match - 9
+            timeSlot[i] = match - 9;
+            //if non empty string set textarea for row to string in the arrow pointed by index
+            if (timeSlot[i] !== string.Empty) {
+              console.log(timeSlot[i]);
+            }
           }
-          console.log(currentHour, match);
-          let time = $(this)[0];
-          if (currentHour === match) {
-            $(time).addClass('present')
-          }
-          else if (currentHour > match) {
-            $(time).addClass('past')
-          }
-          else if (currentHour < match) {
-            $(time).addClass('future')
-          }
-        })
-      }
-      timeBlocks();
+          //
+        }
 
-      // this function didnt work at all 
-      // function saveToLocal() {
-      //   var textAreaInput = $("textarea").val;
-      //   // console.log(textAreaInput);
-      //   var saveBtn = $("#save");
-      //   saveBtn.on("click", function () {
-      //     localStorage.getItem($(this).textAreaInput);
-      //     console.log(text);
-      //   });
-      // };
+        loadData();
 
-      // saveToLocal();
+        function saveData() {
+          //event handled when you click save button
+          var saveBtn = $(".saveBtn");
+          saveBtn.on("click", function (event) {
+            //event time
+            var eventTime = $(".timeblock");
+            //convert to military time ‘+12’
+            eventTime.each(function () {
+              var match = parseInt($(this).attr("id"));
+              if (match < 9) {
+                match += 12;
+              }
+              let time = $(this)[0];
+            });
+            //set index = military time - 9
+            timeSlot[i] = match - 9;
+            //save incoming text in array
+            var input = $(".timeblock").val().trim();
+            timeSlot.push(input);
+            //save array in local storage
+            localStorage.setItem(timeSlot);
+          });
+        }
 
-  
-      // var timeSlots = [$("#9am"), $("#10am"), $("#11am"), $("#12pm"), $("#1pm"), $("#2pm"), $("#3pm"), $("#4pm"), $("#5pm")];
-      // console.log(timeSlots);
+        // this function didnt work at all
+        // function saveToLocal() {
+        //   var textAreaInput = $("textarea").val;
+        //   // console.log(textAreaInput);
+        //   var saveBtn = $("#save");
+        //   saveBtn.on("click", function () {
+        //     localStorage.getItem($(this).textAreaInput);
+        //     console.log(text);
+        //   });
+        // };
 
+        // saveToLocal();
 
-      //this function didnt show anything in console.log
-      // function saveText() {
-      //   var saveBtn = $("#save");
-      //   saveBtn.on("click", function() {
-      //     var text = $(".timeblock").val();
-      //     console.log(text);
-      // });
-      // }
+        //this function didnt show anything in console.log
+        // function saveText() {
+        //   var saveBtn = $("#save");
+        //   saveBtn.on("click", function() {
+        //     var text = $(".timeblock").val();
+        //     console.log(text);
+        // });
+        // }
 
-      
-      //this function saved undefined to local
-      // var saveBtn = $("#save");
-      // for (var i = 1; i < 10; i++) {
-      //   $("#" + i + ("am" || "pm")).val(localStorage.getItem("" + i));
-      // }
+        //this function saved undefined to local
+        // var saveBtn = $("#save");
+        // for (var i = 1; i < 10; i++) {
+        //   $("#" + i + ("am" || "pm")).val(localStorage.getItem("" + i));
+        // }
 
-      // function saveToLocal() {
-      //   for (var i = 0; i < 10; i ++) {
-      //     localStorage.setItem("" + i, $("" + i + ("am" || "pm")).val());
-      //   }
-      // };
-      // saveBtn.on("click", saveToLocal());
-    });
-  </script>
+        // function saveToLocal() {
+        //   for (var i = 0; i < 10; i ++) {
+        //     localStorage.setItem("" + i, $("" + i + ("am" || "pm")).val());
+        //   }
+        // };
+        // saveBtn.on("click", saveToLocal());
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-</body>
+        //grab the time and save that as the key in local storage
+        //grab the value of the textarea that corresponds to the time abd save that as the value in local storage
+        //you want this to happen when the save button is clicked
+        //save buttons have a class and using the key word this you reference the time and the value of the text area that corresponds
+        //make sure the save buttons have the sam class similar to how it works to find the past present future coloring
+        //   // var saveBtn = $("#save"); works just like the one below
+        //   // var saveBtn = $(".saveBtn");
+        //   var saveBtn = $("this").attr("saveBtn");
+        //   // var saveBtn = $(this).saveBtn; // doesnt work
+        //   saveBtn.on("click", function(){
+        //     var key = parseInt($(this).attr('id'))
+        //     var value = $(".timeblock").val()
+        //     localStorage.setItem("key", "value");
+        //   });
+      });
+    </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
 </html>
