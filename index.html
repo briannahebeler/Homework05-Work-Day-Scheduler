@@ -76,7 +76,7 @@
       var currentDay = moment().format('dddd MMMM Do YYYY');
       $("#currentDay").text(currentDay);
 
-      function timeZone() {
+      function timeBlocks() {
         var currentHour = moment().hour();
         var currentTime = $('.col-sm-10');
 
@@ -98,8 +98,33 @@
           }
         })
       }
-      timeZone();
-    }) 
+      timeBlocks();
+
+
+      // function saveToLocal() {
+      //   var textAreaInput = $("textarea").val;
+      //   // console.log(textAreaInput);
+      //   var saveBtn = $("#save");
+      //   saveBtn.on("click", function () {
+      //     localStorage.getItem($(this).textAreaInput);
+      //     console.log(text);
+      //   });
+      // };
+
+      // saveToLocal();
+
+      var saveBtn = $("#save");
+      for (var i = 1; i < 10; i++) {
+        $("#" + i + "am" || "#" + i + "pm").val(localStorage.getItem("" + i));
+      }
+
+      function saveToLocal() {
+        for (var i = 0; i < 10; i ++) {
+          localStorage.setItem("" + i, $("" + i + "am" || "" + i + "pm" ).val());
+        }
+      };
+      saveBtn.on("click", saveToLocal);
+    });
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
