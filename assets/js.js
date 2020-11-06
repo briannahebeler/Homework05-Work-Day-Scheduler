@@ -44,10 +44,29 @@ $(document).ready(function () {
     //     // var key = "test"
     //     // localStorage.setItem(key, timeSlot);
         localStorage.setItem(time, value);
+        // location.reload();
     //     // console.log(localStorage.getItem("TEST"));
     };
 
     $('.saveBtn').click(saveData);
+
+    for (let i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
+        console.log(value);
+        var lsOutput = $(".timeblock");
+
+        lsOutput.text(value);
+    };
+
+    // var value = $(this).prev().val();
+    // function getSavedValue() {
+    //     if (localStorage.getItem(value)) {
+    //         return value;
+    //     };
+    // };
+
+    // getSavedValue();
 
     // $('.saveBtn').click(function (event) {
     //     event.preventDefault();
