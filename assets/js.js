@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    //lines 4 to 27 create the functionality of the colors of the time blocks//
     var currentDay = moment().format("dddd MMMM Do YYYY");
     $("#currentDay").text(currentDay);
 
@@ -29,20 +31,32 @@ $(document).ready(function () {
     //   console.log("I am here");
     // });
 
-    var timeSlot = ["", "", "", "", "", "", "", "", ""];
+    // var timeSlot = ["", "", "", "", "", "", "", "", ""];
 
     function saveData(event) {
         event.preventDefault();
-        // console.log("I have been clicked!");
-        // console.log("timeSlot: " , timeSlot);
-        var input = $(".timeblock").val().trim();
-        timeSlot.push(input);
-        var key = "test"
-        localStorage.setItem(key, timeSlot);
-        // console.log(localStorage.getItem("TEST"));
+    //     // console.log("I have been clicked!");
+    //     // console.log("timeSlot: " , timeSlot);
+        var value = $(this).prev().val();
+    //     // var input = $(".timeblock").val().trim();
+        var time = $(this).parent().attr("id");
+    //     // timeSlot.push(input);
+    //     // var key = "test"
+    //     // localStorage.setItem(key, timeSlot);
+        localStorage.setItem(time, value);
+    //     // console.log(localStorage.getItem("TEST"));
     };
 
     $('.saveBtn').click(saveData);
+
+    // $('.saveBtn').click(function (event) {
+    //     event.preventDefault();
+    //     var time = $(this).parent().attr("id");
+    //     var value = $(this).prev().val();
+    //     console.log(time);
+    //     console.log(value);
+    //     localStorage.setItem(time, value);
+    // });
 
 
     // function loadData() {
