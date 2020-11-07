@@ -26,41 +26,36 @@ $(document).ready(function () {
     }
     timeBlocks();
 
+    // this function saves the data to the local storage
     function saveData(event) {
         event.preventDefault();
+
         var value = $(this).prev().val();
         var time = $(this).parent().attr("id");
+
         localStorage.setItem(time, value);
+        // console.log(time, value);
+        // console.log(localStorage);
+
     };
 
     $('.saveBtn').click(saveData);
 
-    // for (var key in localStorage) {
-    //     var output = ( key + ': ' + localStorage[key]);
-    // };
-    // $(this).prev().html(value);
+    for (let i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i); // text
+        // console.log(key); // time
+        var value = localStorage.getItem(key); // text input
+        // console.log(value); // text input
 
+        // var lsOutput = $(".timeblock"); same as textarea
+        var lsOutput = $("textarea");
+        // var lsOutput = $(this).prev().html(value); // does nothing
+        // var lsOutput = $(this).prev().val(); // undefined
+        // var lsOutput = $(this).parent().attr("id"); //undefined
+        // console.log(lsOutput[i].defaultValue); // trying to get text input to display
 
-    // for (let i = 0; i < localStorage.length; i++) {
-    //     var key = localStorage.key(i);
-    //     var value = localStorage.getItem(key);
-    //     // console.log(value);
-    //     // var lsOutput = $(this).prev().val();
-    //     $(this).prev().html(value);
-    //     // lsOutput.text(value);
-    // };
+        lsOutput.text(value);
 
-    // var value = $(this).prev().val();
-    // function getSavedValue() {
-    //     if (localStorage.getItem(value)) {
-    //         return value;
-    //     };
-    // };
+    };
 
-    // getSavedValue();
-
-    // });
-
-
-    
 });

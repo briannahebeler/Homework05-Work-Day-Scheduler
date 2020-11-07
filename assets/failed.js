@@ -1,7 +1,29 @@
+// tried this from bcs agent... this has nothing to do with what i wanted it to do
+    // $("#save").click(
+    //     function (event) {
+    //         $('body textarea').val(
+    //             "hello to try");
+    //     });
+
  // var saveBtn = $(".saveBtn");
     // saveBtn.on("click", function() {
     //   console.log("I am here");
     // });
+
+    // var value = $(this).prev().val();
+    // function getSavedValue() {
+    //     if (localStorage.getItem(value)) {
+    //         return value;
+    //     };
+    // };
+
+    // getSavedValue();
+
+        // for (var key in localStorage) {
+    //     var output = ( key + ': ' + localStorage[key]);
+    // };
+    // $(this).prev().html(value);
+
 
     // var timeSlot = ["", "", "", "", "", "", "", "", ""];
 
