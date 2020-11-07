@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //lines 4 to 27 create the functionality of the colors of the time blocks//
+    //creating the function of the colors of textareas changing current time//
     var currentDay = moment().format("dddd MMMM Do YYYY");
     $("#currentDay").text(currentDay);
 
@@ -24,6 +24,8 @@ $(document).ready(function () {
             }
         });
     }
+
+    //calling function
     timeBlocks();
 
     // this function saves the data to the local storage
@@ -34,24 +36,22 @@ $(document).ready(function () {
         var time = $(this).parent().attr("id");
 
         localStorage.setItem(time, value);
-        // console.log(time, value);
-        // console.log(localStorage);
 
     };
 
+    //calling function on click
     $('.saveBtn').click(saveData);
 
+    //this loop uses the keys & values in local storage to display the user input in the text are even after the user refreshes the page
     for (let i = 0; i < localStorage.length; i++) {
-        var key = localStorage.key(i); // text
-        // console.log(key); // time
-        var value = localStorage.getItem(key); // text input
-        // console.log(value); // text input
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
 
-        $(".time-block").each(function() {
+        $(".time-block").each(function () {
             if ($(this).attr("id") == key) {
-                $(this).text(value)
+                $(this).text(value);
             }
-        })
+        });
 
     };
 
