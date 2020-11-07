@@ -47,14 +47,11 @@ $(document).ready(function () {
         var value = localStorage.getItem(key); // text input
         // console.log(value); // text input
 
-        // var lsOutput = $(".timeblock"); same as textarea
-        var lsOutput = $("textarea");
-        // var lsOutput = $(this).prev().html(value); // does nothing
-        // var lsOutput = $(this).prev().val(); // undefined
-        // var lsOutput = $(this).parent().attr("id"); //undefined
-        // console.log(lsOutput[i].defaultValue); // trying to get text input to display
-
-        lsOutput.text(value);
+        $(".timeblock").each(function() {
+            if ($(this).attr("id") == key) {
+                $(this).text(value)
+            }
+        })
 
     };
 
