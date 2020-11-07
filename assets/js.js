@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     function timeBlocks() {
         var currentHour = moment().hour();
-        var currentTime = $(".timeblock");
+        var currentTime = $(".time-block");
 
         currentTime.each(function () {
             var match = parseInt($(this).attr("id"));
@@ -47,7 +47,7 @@ $(document).ready(function () {
         var value = localStorage.getItem(key); // text input
         // console.log(value); // text input
 
-        $(".timeblock").each(function() {
+        $(".time-block").each(function() {
             if ($(this).attr("id") == key) {
                 $(this).text(value)
             }
