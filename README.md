@@ -9,6 +9,7 @@ When the user opens the planner they will see the current day listed in the head
 The user will be able to click in to the hourly color coded text box to enter events for the day. When they press the save button located at the end of the times row, they will be able to save their event. Their event will be saved in the webpages local storage, when they refresh the page the saved event will remain in the text box.
 
 ## Screenshot
+![](./assets/images/screencapture.png)
 
 ## Link
 https://briannahebeler.github.io/Homework05-Work-Day-Scheduler/
