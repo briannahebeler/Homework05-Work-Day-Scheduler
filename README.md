@@ -1,4 +1,4 @@
-# Homework05-Work-Day-Scheduler
+# Work Day Scheduler
 
 ## Description
 
@@ -12,4 +12,4 @@ The user will be able to click in to the hourly color coded text box to enter ev
 ![](./assets/images/screencapture.png)
 
 ## Link
-https://briannahebeler.github.io/Homework05-Work-Day-Scheduler/
+https://briannahebeler.github.io/Work-Day-Scheduler/
